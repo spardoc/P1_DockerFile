@@ -1,0 +1,38 @@
+
+
+  
+  /* Estilo para el título */
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Estilos para el menú, suponiendo que app-menu será estilizado internamente o aquí según necesidades */
+  app-menu {
+    display: block; /* Asegúrate de que app-menu es un bloque para aplicar estilos de manera efectiva */
+    width: 100%;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* El router-outlet generalmente no necesita estilos específicos, pero puedes agregar un padding si es necesario */
+  router-outlet {
+    padding: 20px;
+  }   
+  
+  app-menu {
+    display: block;
+    width: 100%;
+    background-color: #333;
+    color: white;
+}
+
+router-outlet {
+    padding: 20px;
+}

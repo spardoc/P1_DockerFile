@@ -1,0 +1,61 @@
+/* Alineación central para el menú */
+.centered-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Opción para alinear verticalmente si es necesario */
+}
+
+.centered-menu li {
+  margin: 10px 0; /* Espacio entre los elementos de la lista */
+}
+
+
+
+/* === Eliminando el estilo predeterminado del botón === */
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Asegurarse de que no hay subrayado en el enlace */
+}
+
+/* Estilo del botón */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #2fa3c0;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* Texto al pasar el mouse sobre el botón */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* Hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
