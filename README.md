@@ -7,7 +7,6 @@ Para construir la imagen de Docker para esta aplicación de chat, navegue al dir
 ```bash 
 docker build -t nombre-de-tu-imagen .
 ```
-![Texto alternativo](img/build.jpg)
 
 Reemplace nombre-de-tu-imagen con el nombre que desea asignar a la imagen de Docker.
 
@@ -20,3 +19,7 @@ docker run -d -p 80:80 --name nombre-del-contenedor nombre-de-tu-imagen
 ```
 
 Reemplace nombre-del-contenedor con el nombre que desea asignar al contenedor y nombre-de-tu-imagen con el nombre de la imagen que construyó previamente. Este comando inicia el contenedor en modo 'detached', mapea los puertos necesarios para acceder al servidor Node.js y al frontend Angular, y ejecuta ambos servicios dentro del contenedor.
+
+Funcionamiento de la aplicación:
+
+![Texto alternativo](img/image.jpg)
