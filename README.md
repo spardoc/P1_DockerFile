@@ -22,4 +22,4 @@ Reemplace nombre-del-contenedor con el nombre que desea asignar al contenedor y 
 
 Funcionamiento de la aplicación:
 
-![Texto alternativo](img/image.jpg)
+![Texto alternativo](img/image.png)
