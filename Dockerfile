@@ -5,6 +5,35 @@ FROM ubuntu:latest
 RUN apt-get update && \
     apt-get install -y nginx nodejs npm curl
 
+# Establecer el directorio de trabajo en el contenedor para el backend
+WORKDIR /usr/src/app/backend
+
+# Copiar el 'package.json' y 'package-lock.json' del backend
+COPY Backend/package*.json ./
+
+# Instalar las dependencias del backend
+RUN npm install
+
+COPY Backend/ .
+
+# Cambiar al directorio del frontend
+WORKDIR /usr/src/app/frontend
+
+# Instalar Angular CLI globalmente
+RUN npm install -g @angular/cli
+
+# Copiar el 'package.json' y 'package-lock.json' del frontend
+COPY Frontend/package*.json ./
+
+# Instalar las dependencias del frontend
+RUN npm install
+
+# Copiar los archivos restantes del proyecto frontend
+COPY Frontend/ .
+
+# Construir la aplicación Angular para producción
+RUN ng build --configuration production
+
 # Instalar Angular CLI
 RUN npm install -g @angular/cli
 
