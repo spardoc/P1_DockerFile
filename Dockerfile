@@ -61,7 +61,6 @@ COPY Backend/index.js /app/index.js
 # Establecer el directorio de trabajo
 WORKDIR /app
 
-# Instalar dependencias del proyecto, si las hay
 #COPY package.json /app/
 #RUN npm install
 
