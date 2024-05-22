@@ -16,8 +16,7 @@ Cómo ejecutar la aplicación
 Una vez construida la imagen, puede ejecutar la aplicación utilizando el siguiente comando:
 
 ```bash 
-docker run -d -p 3000:3000 -p 80:80 --name nombre-del-contenedor nombre-de-tu-imagen
+docker run -d -p 80:80 --name nombre-del-contenedor nombre-de-tu-imagen
 ```
 
 Reemplace nombre-del-contenedor con el nombre que desea asignar al contenedor y nombre-de-tu-imagen con el nombre de la imagen que construyó previamente. Este comando inicia el contenedor en modo 'detached', mapea los puertos necesarios para acceder al servidor Node.js y al frontend Angular, y ejecuta ambos servicios dentro del contenedor.
-

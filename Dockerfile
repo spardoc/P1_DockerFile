@@ -20,10 +20,8 @@ RUN npm install
 # Construir la aplicación Angular
 RUN ng build --prod
 
-# Configurar Nginx para servir la aplicación Angular
-RUN rm /etc/nginx/sites-enabled/default
-COPY nginx.conf /etc/nginx/sites-available/default
-RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+FROM nginx
+COPY Frontend/src/app/app.component.html /usr/share/nginx/html
 
 # Exponer el puerto 80 para Nginx
 EXPOSE 80
